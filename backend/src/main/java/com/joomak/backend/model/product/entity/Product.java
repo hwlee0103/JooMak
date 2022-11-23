@@ -6,7 +6,6 @@ import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Product")
@@ -61,7 +60,7 @@ public class Product extends BaseEntity {
     @Column(name = "max_order_quantity")
     private Integer maxOrderQuantity;
 
-    //기본 생성자?
+    // 확장성 ?
     @Builder
     public Product(Long id, String productName, ProductState productState,
                    String productDescription, Integer productPrice, String productImagePath,
